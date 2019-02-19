@@ -140,18 +140,24 @@ header .slogan {
 .navbar-container {
 	display: flex;
 	align-items: center;
-    margin-bottom: 50px;
+	margin: 20px 0 50px 0;
+	width: 100%;
 }
 
+@media(max-width: 500px) {
+	.navbar-container {
+		padding: 0;
+	}
+}
 .navbar-container nav {
     display: flex;
-    width: 95%;
+    width: 100%;
     justify-content: space-between;
-
 }
 
 .navbar-container img {
     margin-left: 120px;
+	margin-right: 20px;
 }
 
 @media(max-width: 800px) {
@@ -164,7 +170,6 @@ header .slogan {
     }
 
     .navbar-container img {
-        margin-left: 0;
     }
 }
 
@@ -177,9 +182,13 @@ header .slogan {
 
     .navbar-container nav a{
         padding: 10px 0;
-        border: 1px solid gray;
+        border-bottom: 1px solid gray;
         width: 100%;
     }
+
+	.navbar-container nav a:nth-child(1){
+		border-top: 1px solid gray;
+	}
 
     .navbar-container img {
         margin-left: 0;
@@ -189,6 +198,7 @@ header .slogan {
 .navbar-container nav a{
 	text-decoration: none;
     color: gray;
+	padding: 10px 0 10px 20px;
 }
 
 /* Main Content Area */
